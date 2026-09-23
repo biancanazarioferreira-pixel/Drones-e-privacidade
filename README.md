@@ -110,51 +110,6 @@ index_html = r'''<!DOCTYPE html>
 </body>
 </html>'''
 
-style_css = r'''*{box-sizing:border-box}
-body{margin:0;background:#f3f7f6;color:#123b68;font-family:Arial,Helvetica,sans-serif;font-size:16px}
-.hero{background:linear-gradient(115deg,#2563eb,#6195f7);color:#fff;text-align:center;padding:36px 20px 38px}
-.hero h1{margin:0 0 20px;font-size:40px;font-weight:700}
-.hero p{margin:0 0 25px;font-size:18px}
-.meta{font-size:14px}.meta strong{font-weight:700}
-.nav{height:55px;background:#fff;display:flex;justify-content:center;align-items:stretch;box-shadow:0 2px 4px #00000012;gap:2px;position:sticky;top:0;z-index:5;overflow-x:auto}
-.nav-btn{border:0;background:#fff;color:#172d47;padding:0 18px;font-size:16px;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent}
-.nav-btn:hover{color:#0667d8}.nav-btn.active{color:#0069d9;border-bottom-color:#0877df}
-main{max-width:1050px;margin:30px auto 75px;padding:0 16px}
-.tab{display:none}.tab.active{display:block}
-.card{background:#fff;border-radius:14px;padding:38px 40px;box-shadow:0 3px 12px #00000012;margin-bottom:25px}
-h2{margin:0 0 24px;color:#0568c9;font-size:25px;border-left:6px solid #00b894;padding-left:10px}
-h3{color:#0068c9;font-size:19px;margin-top:28px}
-p{line-height:1.65;margin:0 0 18px}
-li{line-height:1.7;margin:10px 0}
-table{border-collapse:collapse;width:100%;margin-top:22px}
-th{background:#086bc9;color:#fff;text-align:left;padding:15px 12px}
-td{padding:14px 12px;border:1px solid #d8d8d8;color:#24486e}
-.quote{background:#effbf5;padding:20px;text-align:center;font-size:18px;font-style:italic;margin-top:4px;border-radius:7px;color:#234b69}
-.verifier-card{max-width:900px;margin-left:auto;margin-right:auto}
-label{display:block;font-weight:700;margin:25px 0 9px}
-textarea{width:100%;min-height:145px;border:1px solid #cdd5dd;border-radius:8px;padding:15px;font:16px Arial;resize:vertical;color:#173d66}
-textarea:focus{outline:2px solid #79b5f5;border-color:#1774d0}
-.counter{text-align:right;color:#718096;font-size:13px;margin:5px 0 16px}
-.primary{background:#086bc9;color:#fff;border:0;border-radius:7px;padding:14px 22px;font-size:16px;font-weight:700;cursor:pointer}
-.primary:hover{background:#075aa9}.primary:disabled{opacity:.65;cursor:wait}
-.loading{display:flex;align-items:center;gap:12px;margin-top:25px;padding:17px;background:#eef7ff;border-radius:8px;color:#075fae;font-weight:700}
-.hidden{display:none!important}.spinner{width:20px;height:20px;border:3px solid #cfe5fa;border-top-color:#0871ce;border-radius:50%;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-.result{margin-top:24px;border-radius:9px;padding:22px;border:1px solid #d9e2eb}
-.result.true{background:#effbf3;border-color:#92d4aa}.result.false{background:#fff3f2;border-color:#efb1aa}.result.uncertain{background:#fffaf0;border-color:#efd08c}
-.result-title{font-size:23px;font-weight:800;margin-bottom:12px}
-.result.true .result-title{color:#16803b}.result.false .result-title{color:#c0392b}.result.uncertain .result-title{color:#a56b00}
-.result p{margin:8px 0}.truth-box{margin-top:17px;background:#fff;padding:15px;border-radius:7px;border-left:4px solid #08a46c}
-.sources{margin-top:18px}.sources a{display:block;color:#0669ca;margin:7px 0;text-decoration:none}.sources a:hover{text-decoration:underline}
-.notice{margin-top:20px;background:#f3f6f8;padding:13px 15px;border-radius:7px;color:#536579;font-size:13px;line-height:1.5}
-.quiz-card{padding-bottom:40px}.question{background:#fafafa;border:1px solid #e4e4e4;border-radius:8px;padding:20px;margin:18px 0}
-.question h4{font-size:17px;margin:0 0 16px;color:#173c65;line-height:1.5}
-.option{display:block;width:100%;text-align:left;background:#fff;border:2px solid #ddd;border-radius:7px;padding:13px;margin:10px 0;font-size:15px;cursor:pointer}
-.option:hover{border-color:#6da9e9}.option.selected.correct{background:#e9f8ee;border-color:#34a853}.option.selected.wrong{background:#fff0ee;border-color:#d9534f}
-.score{background:#e3f4ff;color:#0568c9;text-align:center;font-weight:800;font-size:20px;padding:20px;border-radius:8px;margin-top:20px}
-footer{text-align:center;color:#5c7187;font-size:13px;padding:0 20px 40px}footer p{margin:8px}
-@media(max-width:700px){.hero h1{font-size:29px}.hero{padding:28px 14px}.hero p{font-size:16px}.meta{line-height:1.8}.nav{justify-content:flex-start}.nav-btn{padding:0 13px;font-size:14px}main{margin-top:18px}.card{padding:25px 20px}h2{font-size:22px}table{font-size:14px}th,td{padding:10px 8px}.verifier-card{padding:25px 18px}}
-'''
-
 script_js = r'''const navButtons = document.querySelectorAll(".nav-btn");
 const tabs = document.querySelectorAll(".tab");
 
